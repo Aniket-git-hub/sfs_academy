@@ -8,6 +8,7 @@ import lecture6img from "../../Assets/img/lecture/lecture6ss.png";
 import lecture7img from "../../Assets/img/lecture/lecture7ss.png";
 import lecture8img from "../../Assets/img/lecture/lecture8ss.png";
 import lecture9img from "../../Assets/img/lecture/lecture9ss.png";
+import lecture10img from "../../Assets/img/lecture/lecture10ss.png";
 import "../../Assets/css/RecordedLectures.css";
 
 const RecordedLectures = () => {
@@ -46,6 +47,10 @@ const RecordedLectures = () => {
     };
     const openLinkInNewTab9 = () => {
         const linkUrl = 'https://drive.google.com/file/d/1Jb_EfE44RxhX-hZuR_Q7EemrpkqpP80D/view?usp=sharing';
+        window.open(linkUrl, '_blank');
+    };
+    const openLinkInNewTab10 = () => {
+        const linkUrl = 'https://drive.google.com/file/d/1PZFxiORCcPZY-kcqCSQELsUQqpk4Amr2/view?usp=sharing';
         window.open(linkUrl, '_blank');
     };
 
@@ -176,6 +181,20 @@ const RecordedLectures = () => {
                         </p>
                     </div>
                     <button onClick={openLinkInNewTab9} class="rcard-button">Revise ▶️</button>
+                </div>
+            </div>
+            <div className="lecture-image">
+                <div class="rcard">
+                    <div class="rcard-details">
+                        <p class="text-title">Lecture 10 (28-03-2024)</p>
+                        <p class="text-body">
+                            <img onClick={openLinkInNewTab10} src={lecture10img} width={300} height={200} />
+                            <button onClick={openLinkInNewTab10} className="playButton">
+                                ▶️
+                            </button>
+                        </p>
+                    </div>
+                    <button onClick={openLinkInNewTab10} class="rcard-button">Revise ▶️</button>
                 </div>
             </div>
             
