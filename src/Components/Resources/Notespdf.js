@@ -76,6 +76,10 @@ const Notespdf = () => {
         const linkUrl = 'https://drive.google.com/file/d/1WfMrnYQZ6Coxb4D1Ao81d-AntzfnxaPT/view?usp=sharing';
         window.open(linkUrl, '_blank');
     };
+    const openN19 = () => {
+        const linkUrl = 'https://drive.google.com/file/d/1RB4hYmgApLilK7NL2htOaksvrFid8Q5c/view?usp=sharing';
+        window.open(linkUrl, '_blank');
+    };
 
 
 
@@ -119,68 +123,75 @@ const Notespdf = () => {
             <div className="col-lg-12 d-flex align-items-center justify-content-center notes">
                 <div className="col-lg-4 p-3">
                     <div className="card p-2 pdffile" onClick={openN7}>
-                    Lecture 1 notes.pdf
+                        Lecture 1 notes.pdf
                     </div>
                 </div>
                 <div className="col-lg-4 p-3">
                     <div className="card p-2 pdffile" onClick={openN8}>
-                    Lecture 2 notes.pdf
+                        Lecture 2 notes.pdf
                     </div>
                 </div>
                 <div className="col-lg-4 p-3">
                     <div className="card p-2 pdffile" onClick={openN9}>
-                    Lecture 3 notes.pdf
+                        Lecture 3 notes.pdf
                     </div>
                 </div>
             </div>
             <div className="col-lg-12 d-flex align-items-center justify-content-center notes">
                 <div className="col-lg-4 p-3">
                     <div className="card p-2 pdffile" onClick={openN10}>
-                    Lecture 4 notes.pdf
+                        Lecture 4 notes.pdf
                     </div>
                 </div>
                 <div className="col-lg-4 p-3">
                     <div className="card p-2 pdffile" onClick={openN11}>
-                    Lecture 5 notes.pdf
+                        Lecture 5 notes.pdf
                     </div>
                 </div>
                 <div className="col-lg-4 p-3">
                     <div className="card p-2 pdffile" onClick={openN12}>
-                    Lecture 6 notes.pdf
+                        Lecture 6 notes.pdf
                     </div>
                 </div>
             </div>
             <div className="col-lg-12 d-flex align-items-center justify-content-center notes">
                 <div className="col-lg-4 p-3">
                     <div className="card p-2 pdffile" onClick={openN13}>
-                    Lecture 7 notes.pdf
+                        Lecture 7 notes.pdf
                     </div>
                 </div>
                 <div className="col-lg-4 p-3">
                     <div className="card p-2 pdffile" onClick={openN14}>
-                    Lecture 8 notes.pdf
+                        Lecture 8 notes.pdf
                     </div>
                 </div>
                 <div className="col-lg-4 p-3">
                     <div className="card p-2 pdffile" onClick={openN15}>
-                    Lecture 9 notes.pdf
+                        Lecture 9 notes.pdf
                     </div>
                 </div>
             </div>
             <div className="col-lg-12 d-flex align-items-center justify-content-center notes">
                 <div className="col-lg-4 p-3">
                     <div className="card p-2 pdffile" onClick={openN16}>
-                    Lecture 10 notes.pdf
+                        Lecture 10 notes.pdf
                     </div>
                 </div>
                 <div className="col-lg-4 p-3">
                     <div className="card p-2 pdffile" onClick={openN17}>
-                    Lecture 11 notes.pdf
+                        Lecture 11 notes.pdf
                     </div>
                 </div>
                 <div className="col-lg-4 p-3">
                     <div className="card p-2 pdffile" onClick={openN18}>
-                    Lecture 12 notes.pdf
+                        Lecture 12 notes.pdf
+                    </div>
+                </div>
+            </div>
+            <div className="col-lg-12 d-flex align-items-center justify-content-center notes">
+                <div className="col-lg-4 p-3">
+                    <div className="card p-2 pdffile" onClick={openN19}>
+                        Mensical Injuries Kisner 7th 824-830.pdf
                     </div>
                 </div>
             </div>
