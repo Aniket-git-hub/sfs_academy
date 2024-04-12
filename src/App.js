@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 import Main from "./Components/Main";
 import TimeTable from './Components/CommonPages/TimeTable';
 import RegisterForm from './Components/User/RegisterForm';

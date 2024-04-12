@@ -29,7 +29,7 @@ const Payments = () => {
             <div className="payments-main">
                 <div className="upi">
                     <h1>UPI QR Code and UPI-ID</h1>
-                    <img src={qrcode} />
+                    <img src={qrcode} alt="SFS Academy Payment QR Code" />
                     <p className="amount">Amount - ₹ 36,999/-</p>
                 </div>
                 <div className="bank-transfer">
