@@ -80,6 +80,14 @@ const Notespdf = () => {
         const linkUrl = 'https://drive.google.com/file/d/1RB4hYmgApLilK7NL2htOaksvrFid8Q5c/view?usp=sharing';
         window.open(linkUrl, '_blank');
     };
+    const openN20 = () => {
+        const linkUrl = 'https://drive.google.com/file/d/12QwQrAod5SwG1jJpan8Vb8dZs6NByllT/view?usp=sharing';
+        window.open(linkUrl, '_blank');
+    };
+    const openN21 = () => {
+        const linkUrl = 'https://drive.google.com/file/d/1HHGJi4iFI5m98CJsmNU8GM-XQefZy1sF/view?usp=sharing';
+        window.open(linkUrl, '_blank');
+    };
 
 
 
@@ -192,6 +200,16 @@ const Notespdf = () => {
                 <div className="col-lg-4 p-3">
                     <div className="card p-2 pdffile" onClick={openN19}>
                         Mensical Injuries Kisner 7th 824-830.pdf
+                    </div>
+                </div>
+                <div className="col-lg-4 p-3">
+                    <div className="card p-2 pdffile" onClick={openN20}>
+                    Lecture 13 notes.pdf
+                    </div>
+                </div>
+                <div className="col-lg-4 p-3">
+                    <div className="card p-2 pdffile" onClick={openN21}>
+                    Lecture 14 notes.pdf
                     </div>
                 </div>
             </div>

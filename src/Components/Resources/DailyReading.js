@@ -120,6 +120,18 @@ const DailyReading = () => {
         const linkUrl = 'https://drive.google.com/file/d/17I0JOZVu6ZvE1Zs5rlcE4mFIjrwTmCw1/view?usp=sharing';
         window.open(linkUrl, '_blank');
     }
+    const openDR30 = () => {
+        const linkUrl = 'https://drive.google.com/file/d/1JGihs4MPqicdzysDAxZHRA5RhbvF4fta/view?usp=sharing';
+        window.open(linkUrl, '_blank');
+    }
+    const openDR31 = () => {
+        const linkUrl = 'https://drive.google.com/file/d/1ysIqfDFRmaWw8FOvAjx09x1ViUVEoe7s/view?usp=sharing';
+        window.open(linkUrl, '_blank');
+    }
+    const openDR32 = () => {
+        const linkUrl = 'https://drive.google.com/file/d/1Fk-5CowKrAVegpmagLEjYZp-OIynNFEa/view?usp=sharing';
+        window.open(linkUrl, '_blank');
+    }
 
     return (
         <div className="notes">
@@ -245,46 +257,63 @@ const DailyReading = () => {
             <div className="col-lg-12 d-flex align-items-center justify-content-center notes">
                 <div className="col-lg-4 p-3">
                     <div className="card p-2 pdffile" onClick={openDR22}>
-                    GB Syndrome Umphred 542-552.pdf
+                        GB Syndrome Umphred 542-552.pdf
                     </div>
                 </div>
                 <div className="col-lg-4 p-3">
                     <div className="card p-2 pdffile" onClick={openDR23}>
-                    IFT TherapyEd 2018 423.pdf
+                        IFT TherapyEd 2018 423.pdf
                     </div>
                 </div>
                 <div className="col-lg-4 p-3">
                     <div className="card p-2 pdffile" onClick={openDR24}>
-                    Kendall Hip 422-433.pdf
+                        Kendall Hip 422-433.pdf
                     </div>
                 </div>
             </div>
             <div className="col-lg-12 d-flex align-items-center justify-content-center notes">
                 <div className="col-lg-4 p-3">
                     <div className="card p-2 pdffile" onClick={openDR25}>
-                    Mensical Injuries Kisner 7th 824-830.pdf
+                        Mensical Injuries Kisner 7th 824-830.pdf
                     </div>
                 </div>
                 <div className="col-lg-4 p-3">
                     <div className="card p-2 pdffile" onClick={openDR26}>
-                    Osullivan Stroke examination and intervention pg 667 to 695.pdf
+                        Osullivan Stroke examination and intervention pg 667 to 695.pdf
                     </div>
                 </div>
                 <div className="col-lg-4 p-3">
                     <div className="card p-2 pdffile" onClick={openDR27}>
-                    Rheumatoid Arthritis.pdf
+                        Rheumatoid Arthritis.pdf
                     </div>
                 </div>
             </div>
             <div className="col-lg-12 d-flex align-items-center justify-content-center notes">
                 <div className="col-lg-4 p-3">
                     <div className="card p-2 pdffile" onClick={openDR28}>
-                    septic Arthritis .pdf
+                        septic Arthritis .pdf
                     </div>
                 </div>
                 <div className="col-lg-4 p-3">
                     <div className="card p-2 pdffile" onClick={openDR29}>
-                    Spina Bifida Umphred 419-427.pdf
+                        Spina Bifida Umphred 419-427.pdf
+                    </div>
+                </div>
+                <div className="col-lg-4 p-3">
+                    <div className="card p-2 pdffile" onClick={openDR30}>
+                        Kisner 7th 1020-1027.pdf
+                    </div>
+                </div>
+            </div>
+            <div className="col-lg-12 d-flex align-items-center justify-content-center notes">
+                <div className="col-lg-4 p-3">
+                    <div className="card p-2 pdffile" onClick={openDR28}>
+                        Lymphedema O_Sullivan 6th 588-590, 593-598.pdf
+                    </div>
+                </div>
+                <div className="col-lg-4 p-3">
+                    <div className="card p-2 pdffile" onClick={openDR29}>
+                        Osteoarthritis Kisner 7th 341-344.pdf
                     </div>
                 </div>
             </div>
