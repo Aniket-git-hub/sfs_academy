@@ -1,0 +1,96 @@
+.navbar-admin {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-admin img {
+    margin-right: 465px;
+    /* Adjust spacing between image and text */
+    margin-top: 10px;
+}
+
+.navbar-admin h1 {
+    margin: 0;
+    /* Reset margin */
+    color: #0097b2;
+}
+
+
+.upload-main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 150px);
+    /* Adjust the value based on your footer height */
+}
+
+.upload-content {
+    text-align: center;
+    width: 80%;
+    max-width: 600px;
+    padding: 3%;
+    border: 1px solid #3d3d3d;
+    border-radius: 20px;
+    height: 580px;
+    overflow-y: auto;
+}
+
+/* Place radio buttons in the same line */
+.upload-content form .radio-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Align radio buttons vertically */
+    margin-bottom: 20px;
+}
+
+.upload-content form .radio-container label {
+    margin-right: 20px;
+    display: flex;
+    align-items: center;
+    /* Adjust spacing between radio buttons */
+}
+
+/* Additional styles for form elements */
+.upload-content form div {
+    margin-bottom: 10px;
+}
+
+.upload-content form label {
+    display: block;
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+.upload-content form input[type="radio"],
+.upload-content form input[type="file"],
+.upload-content form input[type="text"],
+.upload-content form select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.upload-content form .radio-container label input[type="radio"] {
+    margin-right: 5px; /* Adjust spacing between radio button and label text */
+}
+
+.upload-content form button {
+    width: 100%;
+    padding: 10px;
+    background-color: #0097b2;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    border: 1px solid #0097b2;
+    transition: 0.3s;
+}
+
+.upload-content form button:hover {
+    background-color: transparent;
+    color: #0097b2;
+    border: 1px solid #0097b2;
+}

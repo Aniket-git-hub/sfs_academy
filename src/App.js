@@ -11,6 +11,8 @@ import Payments from './Components/CommonPages/Payments';
 import TermsAndConditions from './Components/CommonPages/TermsAndConditions';
 import ComingSoon from './Components/CommonPages/ComingSoon';
 import LoginForNotes from './Components/User/LoginForNotes';
+import Admin from './Components/Admin/Admin';
+import AdminLogin from './Components/Admin/AdminLogin';
 
 function App() {
   return (
@@ -27,6 +29,8 @@ function App() {
         <Route path="/payments" element={<Payments />} />
         <Route path="/termsandconditions" element={<TermsAndConditions />} />
         <Route path="/comingsoon" element={<ComingSoon />} />
+        <Route path="/admin/upload" element={<Admin />} />
+        <Route path="/admin/login" element={<AdminLogin />} />
       </Routes>
     </Router>
   );

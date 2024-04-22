@@ -88,6 +88,14 @@ const Notespdf = () => {
         const linkUrl = 'https://drive.google.com/file/d/1HHGJi4iFI5m98CJsmNU8GM-XQefZy1sF/view?usp=sharing';
         window.open(linkUrl, '_blank');
     };
+    const openN22 = () => {
+        const linkUrl = 'https://docs.google.com/presentation/d/1jq3eJ1YHRpzzHCwSbFOjOf4TURBri4PS/edit?usp=sharing&ouid=103291519303243662803&rtpof=true&sd=true';
+        window.open(linkUrl, '_blank');
+    };
+    const openN23 = () => {
+        const linkUrl = 'https://docs.google.com/presentation/d/1pDJqz_8AymFn6FIWCvV8-JMMw7uo0hMz/edit?usp=sharing&ouid=103291519303243662803&rtpof=true&sd=true';
+        window.open(linkUrl, '_blank');
+    };
 
 
 
@@ -204,12 +212,24 @@ const Notespdf = () => {
                 </div>
                 <div className="col-lg-4 p-3">
                     <div className="card p-2 pdffile" onClick={openN20}>
-                    Lecture 13 notes.pdf
+                        Lecture 13 notes.pdf
                     </div>
                 </div>
                 <div className="col-lg-4 p-3">
                     <div className="card p-2 pdffile" onClick={openN21}>
-                    Lecture 14 notes.pdf
+                        Lecture 14 notes.pdf
+                    </div>
+                </div>
+            </div>
+            <div className="col-lg-12 d-flex align-items-center justify-content-center notes">
+                <div className="col-lg-4 p-3">
+                    <div className="card p-2 pdffile" onClick={openN22}>
+                        Lecture 15 notes.pptx
+                    </div>
+                </div>
+                <div className="col-lg-4 p-3">
+                    <div className="card p-2 pdffile" onClick={openN23}>
+                        lecture 16 notes.pptx
                     </div>
                 </div>
             </div>
