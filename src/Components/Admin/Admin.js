@@ -4,10 +4,16 @@ import Footer from "../utilities/Footer";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "../../Assets/css/Admin.css";
 import logo from "../../Assets/img/SFS Academy Logo (14).png";
+import instance from "../../Config/axiosconfig.js";
+import { toast } from 'react-toastify';
+import { ToastContainer } from 'react-toastify';
 
 const Admin = () => {
     const [contentType, setContentType] = useState('videos');
     const [selectedCategory, setSelectedCategory] = useState('');
+    const [file, setFile] = useState(null);
+    const [caption, setCaption] = useState('');
+    const [categoryId, setCategoryId] = useState('');
 
     const handleContentTypeChange = (event) => {
         setContentType(event.target.value);
@@ -20,6 +26,28 @@ const Admin = () => {
     const handleSubmit = (event) => {
         event.preventDefault();
         // Add your form submission logic here
+    };
+
+    const handleUploadDoc = async (event) => {
+        
+        console.log("click");
+        setSelectedCategory(event.target.value);
+        setCategoryId(event.target.value);
+
+        event.preventDefault();
+        const formData = new FormData();
+
+        formData.append('caption', caption);
+        formData.append('file', file);
+        formData.append('categoryId', categoryId);
+        try {
+            const response = await instance.post("/document", formData);
+            console.log(response);
+            toast.success('Doc Upload Success', { position: "top-right" });
+        } catch (e) {
+            console.log(e);
+            toast.error('fail', { position: "top-right" });
+        }
     };
 
     return (
@@ -58,7 +86,7 @@ const Admin = () => {
                                 <div>
                                     <label>
                                         Select Category:
-                                        <select value={selectedCategory} onChange={handleCategoryChange}>
+                                        <select value={selectedCategory}>
                                             <option value="">Select Video Category</option>
                                             <option value="recordedLectures">Recorded Lectures</option>
                                             <option value="demoLectures">Demo Lectures</option>
@@ -74,7 +102,7 @@ const Admin = () => {
                                 </div>
                                 <div>
                                     <label>
-                                        Name:
+                                        Title:
                                         <input type="text" />
                                     </label>
                                 </div>
@@ -94,31 +122,31 @@ const Admin = () => {
                                 <div>
                                     <label>
                                         Select Category:
-                                        <select value={selectedCategory} onChange={handleCategoryChange}>
+                                        <select value={categoryId} onChange={(e) => setCategoryId(e.target.value)} id="categoryId">
                                             <option value="">Select Notes Category</option>
-                                            <option value="notes">Notes</option>
-                                            <option value="dailyReading">Daily Reading</option>
-                                            <option value="jointSpecificReading">Joint Specific Reading</option>
-                                            <option value="convexConcaveRuleforallJoints">Convex Concave Rule for all Joints</option>
-                                            <option value="specialTest">Special Test</option>
-                                            <option value="books">Books</option>
+                                            <option value="4">Notes</option>
+                                            <option value="5">Daily Reading</option>
+                                            <option value="6">Joint Specific Reading</option>
+                                            <option value="8">Convex Concave Rule for all Joints</option>
+                                            <option value="7">Special Test</option>
+                                            <option value="3">Books</option>
                                         </select>
                                     </label>
                                 </div>
                                 <div>
                                     <label>
                                         Name:
-                                        <input type="text" />
+                                        <input type="text" id="caption" onChange={(e) => setCaption(e.target.value)}/>
                                     </label>
                                 </div>
                                 <div>
                                     <label>
                                         Upload Notes:
-                                        <input type="file" accept=".pdf,.doc,.docx" />
+                                        <input type="file" accept=".pdf,.doc,.docx" id="file" onChange={(e) => setFile(e.target.files[0])}/>
                                     </label>
                                 </div>
                                 <div>
-                                    <button type="submit">Upload Notes</button>
+                                    <button type="submit"onChange={handleUploadDoc}>Upload Notes</button>
                                 </div>
                             </>
                         )}

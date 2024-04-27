@@ -13,6 +13,9 @@ import ComingSoon from './Components/CommonPages/ComingSoon';
 import LoginForNotes from './Components/User/LoginForNotes';
 import Admin from './Components/Admin/Admin';
 import AdminLogin from './Components/Admin/AdminLogin';
+import ForgetPassword from './Components/User/ForgetPassword';
+import OTP from './Components/User/OTP';
+import ResetPassword from './Components/User/ResetPassword';
 
 function App() {
   return (
@@ -31,6 +34,9 @@ function App() {
         <Route path="/comingsoon" element={<ComingSoon />} />
         <Route path="/admin/upload" element={<Admin />} />
         <Route path="/admin/login" element={<AdminLogin />} />
+        <Route path="/forgetpassword" element={<ForgetPassword />} />
+        <Route path="/otp" element={<OTP />} />
+        <Route path="/resetpassword" element={<ResetPassword />} />
       </Routes>
     </Router>
   );

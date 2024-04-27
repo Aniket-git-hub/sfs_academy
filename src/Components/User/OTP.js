@@ -11,7 +11,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import { ToastContainer } from 'react-toastify';
 import Password from "../Common/Password";
 
-const LoginForm = () => {
+const LoginForNotes = () => {
 
     const [label, setLabel] = useState(''); // Set your default label here
     const [error, setErrors] = useState(false);
@@ -30,11 +30,11 @@ const LoginForm = () => {
         try {
             const response = await instance.post("auth/login", { email, password });
             console.log(response);
-            toast.success('Login successful!', { position: "top-right" });
+            toast.success('Login successful! You now have access to the Resources', { position: "top-right" });
             // Add any further logic you need after successful login
             setTimeout(() => {
-                navigate('/course');
-            }, 3000); // 3000 milliseconds (3 seconds)
+                navigate('/resources');
+            }, 3000); // 3000 milliseconds (3 seconds)  
         } catch (e) {
             console.log(e);
             toast.error('Invalid email or password. Please try again.', { position: "top-right" });
@@ -61,7 +61,7 @@ const LoginForm = () => {
                                 <div className="card-body logincard">
                                     <div className="justify-content-center d-flex">
                                         <div className='card-title'>
-                                            <h3>Login to your Account</h3>
+                                            <h4>Enter OTP Recieved on the Mail-ID</h4>
                                         </div>
                                     </div>
                                     <form>
@@ -71,22 +71,14 @@ const LoginForm = () => {
 
                                                     <FormFields
                                                         fieldName="TextInput"
-                                                        id="email"
-                                                        name="email"
-                                                        label={label ? label : "E-Mail"}
+                                                        id="otp"
+                                                        name="otp"
+                                                        label={label ? label : "OTP"}
                                                         requiredInd={true}
                                                         value={email}
-                                                        placeholder={label ? label : "Enter your Mail-ID"}
+                                                        placeholder={label ? label : "Enter OTP"}
                                                         onChange={(e) => setEmail(e.target.value)}
                                                         showErrorMsg={error && !email.trim() ? "Required!" : ""}
-                                                    />
-                                                    <Password
-                                                        id="password"
-                                                        label="Password"
-                                                        requiredInd={true}
-                                                        placeholder="Enter your password"
-                                                        onChange={(value) => setPassword(value) }
-                                                    // Add other necessary props
                                                     />
                                                 </div>
                                             </div>
@@ -94,17 +86,8 @@ const LoginForm = () => {
                                         <div className="login-submit">
                                             <button
                                                 className="button-submit"
-                                                onClick={handleLoginSubmit}>Login</button>
+                                                onClick={handleLoginSubmit}>Get OTP</button>
                                         </div>
-                                        <div className="existing-user">
-                                            <a href="/register">Are you a new user? Click here</a>
-                                            
-                                        </div>
-                                        <div className="existing-user">
-                                        <a href="/forgetpassword">Forgot Password? Click here to Reset.</a>
-                                            
-                                        </div>
-                                        
                                     </form>
                                 </div>
                             </div>
@@ -119,4 +102,4 @@ const LoginForm = () => {
     );
 };
 
-export default LoginForm;
+export default LoginForNotes;

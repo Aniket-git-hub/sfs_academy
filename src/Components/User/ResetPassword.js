@@ -30,10 +30,10 @@ const LoginForm = () => {
         try {
             const response = await instance.post("auth/login", { email, password });
             console.log(response);
-            toast.success('Login successful!', { position: "top-right" });
+            toast.success('Password Reset successful!', { position: "top-right" });
             // Add any further logic you need after successful login
             setTimeout(() => {
-                navigate('/course');
+                navigate('/resources');
             }, 3000); // 3000 milliseconds (3 seconds)
         } catch (e) {
             console.log(e);
@@ -61,7 +61,7 @@ const LoginForm = () => {
                                 <div className="card-body logincard">
                                     <div className="justify-content-center d-flex">
                                         <div className='card-title'>
-                                            <h3>Login to your Account</h3>
+                                            <h3>Reset your Account Password</h3>
                                         </div>
                                     </div>
                                     <form>
@@ -69,23 +69,20 @@ const LoginForm = () => {
                                             <div className="row d-flex justify-content-center">
                                                 <div className="col-lg-6">
 
-                                                    <FormFields
-                                                        fieldName="TextInput"
-                                                        id="email"
-                                                        name="email"
-                                                        label={label ? label : "E-Mail"}
-                                                        requiredInd={true}
-                                                        value={email}
-                                                        placeholder={label ? label : "Enter your Mail-ID"}
-                                                        onChange={(e) => setEmail(e.target.value)}
-                                                        showErrorMsg={error && !email.trim() ? "Required!" : ""}
-                                                    />
                                                     <Password
                                                         id="password"
                                                         label="Password"
                                                         requiredInd={true}
                                                         placeholder="Enter your password"
-                                                        onChange={(value) => setPassword(value) }
+                                                        onChange={(value) => setPassword(value)}
+                                                    // Add other necessary props
+                                                    />
+                                                    <Password
+                                                        id="password"
+                                                        label="Confirm Password"
+                                                        requiredInd={true}
+                                                        placeholder="Enter your password"
+                                                        onChange={(value) => setPassword(value)}
                                                     // Add other necessary props
                                                     />
                                                 </div>
@@ -96,15 +93,6 @@ const LoginForm = () => {
                                                 className="button-submit"
                                                 onClick={handleLoginSubmit}>Login</button>
                                         </div>
-                                        <div className="existing-user">
-                                            <a href="/register">Are you a new user? Click here</a>
-                                            
-                                        </div>
-                                        <div className="existing-user">
-                                        <a href="/forgetpassword">Forgot Password? Click here to Reset.</a>
-                                            
-                                        </div>
-                                        
                                     </form>
                                 </div>
                             </div>
