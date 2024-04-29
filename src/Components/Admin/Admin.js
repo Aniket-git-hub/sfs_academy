@@ -29,7 +29,7 @@ const Admin = () => {
     };
 
     const handleUploadDoc = async (event) => {
-        
+        console.log(categoryId);
         console.log("click");
         setSelectedCategory(event.target.value);
         setCategoryId(event.target.value);
@@ -146,7 +146,7 @@ const Admin = () => {
                                     </label>
                                 </div>
                                 <div>
-                                    <button type="submit"onChange={handleUploadDoc}>Upload Notes</button>
+                                    <button type="submit" onClick={handleUploadDoc}>Upload Notes</button>
                                 </div>
                             </>
                         )}

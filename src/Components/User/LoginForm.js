@@ -85,7 +85,7 @@ const LoginForm = () => {
                                                         label="Password"
                                                         requiredInd={true}
                                                         placeholder="Enter your password"
-                                                        onChange={(value) => setPassword(value) }
+                                                        onChange={(value) => setPassword(value)}
                                                     // Add other necessary props
                                                     />
                                                 </div>
@@ -98,13 +98,13 @@ const LoginForm = () => {
                                         </div>
                                         <div className="existing-user">
                                             <a href="/register">Are you a new user? Click here</a>
-                                            
+
                                         </div>
                                         <div className="existing-user">
-                                        <a href="/forgetpassword">Forgot Password? Click here to Reset.</a>
-                                            
+                                            <a href="/forgetpassword">Forgot Password? Click here to Reset.</a>
+
                                         </div>
-                                        
+
                                     </form>
                                 </div>
                             </div>

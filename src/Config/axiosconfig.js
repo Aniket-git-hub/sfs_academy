@@ -5,7 +5,7 @@ import getEnvVariable from "../Getenv";
 // console.log(getEnvVariable("BASE_URL"))
 // console.log(getEnvVariable("NODE_ENV"))
 const instance = axios.create({
-    baseURL:  'https://sfs-academy-server.onrender.com/api/', 
+    baseURL:  'http://localhost:3000/api', 
 })
 
 export default instance;
