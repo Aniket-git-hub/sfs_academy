@@ -50,16 +50,26 @@
 
 // export default SpecialTest;
 
+
 import { useEffect, useState } from "react";
 import instance from "../../Config/axiosconfig.js";
 import DocumentList from "./DocumentLists.js";
+
+
+
+
+
 const SpecialTest = () => {
     const [data, setData] = useState([]);
 
     useEffect(() => {
         const loadData = async () => {
             try {
+
                 const response = await instance.get("/document");
+
+
+
                 setData(response.data.documents);
             } catch (error) {
                 console.error("Error loading data:", error);
