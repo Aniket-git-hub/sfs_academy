@@ -101,23 +101,23 @@ const DailyReading = () => {
         window.open(linkUrl, '_blank');
     };
     const openDR25 = () => {
-        const linkUrl = 'https://drive.google.com/file/d/17I0JOZVu6ZvE1Zs5rlcE4mFIjrwTmCw1/view?usp=sharing';
+        const linkUrl = 'https://drive.google.com/file/d/1FjQVfNRUpKK2IXR0MXtRaTknJiM_5TwW/view?usp=sharing';
         window.open(linkUrl, '_blank');
     }
     const openDR26 = () => {
-        const linkUrl = 'https://drive.google.com/file/d/17I0JOZVu6ZvE1Zs5rlcE4mFIjrwTmCw1/view?usp=sharing';
+        const linkUrl = 'https://drive.google.com/file/d/1KRuSorl0t8wRPT9vJg1zEPj4z9zm2FRy/view?usp=sharing';
         window.open(linkUrl, '_blank');
     }
     const openDR27 = () => {
-        const linkUrl = 'https://drive.google.com/file/d/17I0JOZVu6ZvE1Zs5rlcE4mFIjrwTmCw1/view?usp=sharing';
+        const linkUrl = 'https://drive.google.com/file/d/1StBxz3twWbWca6XfpUwNaa0S-6envok2/view?usp=sharing';
         window.open(linkUrl, '_blank');
     }
     const openDR28 = () => {
-        const linkUrl = 'https://drive.google.com/file/d/17I0JOZVu6ZvE1Zs5rlcE4mFIjrwTmCw1/view?usp=sharing';
+        const linkUrl = 'https://drive.google.com/file/d/17uNDx56mv9nzqIeIplqyJgkcVjSIwi_i/view?usp=sharing';
         window.open(linkUrl, '_blank');
     }
     const openDR29 = () => {
-        const linkUrl = 'https://drive.google.com/file/d/17I0JOZVu6ZvE1Zs5rlcE4mFIjrwTmCw1/view?usp=sharing';
+        const linkUrl = 'https://drive.google.com/file/d/1EvOfvw692ONOiP_mZFajCl2MyGZ93V4b/view?usp=sharing';
         window.open(linkUrl, '_blank');
     }
     const openDR30 = () => {
@@ -307,12 +307,12 @@ const DailyReading = () => {
             </div>
             <div className="col-lg-12 d-flex align-items-center justify-content-center notes">
                 <div className="col-lg-4 p-3">
-                    <div className="card p-2 pdffile" onClick={openDR28}>
+                    <div className="card p-2 pdffile" onClick={openDR31}>
                         Lymphedema O_Sullivan 6th 588-590, 593-598.pdf
                     </div>
                 </div>
                 <div className="col-lg-4 p-3">
-                    <div className="card p-2 pdffile" onClick={openDR29}>
+                    <div className="card p-2 pdffile" onClick={openDR32}>
                         Osteoarthritis Kisner 7th 341-344.pdf
                     </div>
                 </div>

@@ -33,8 +33,8 @@ const LoginForNotes = () => {
             toast.success('Login successful! You now have access to the Resources', { position: "top-right" });
             // Add any further logic you need after successful login
             setTimeout(() => {
-                navigate('/resources');
-            }, 3000); // 3000 milliseconds (3 seconds)  
+                navigate('/resetpassword');
+            },); 
         } catch (e) {
             console.log(e);
             toast.error('Invalid email or password. Please try again.', { position: "top-right" });

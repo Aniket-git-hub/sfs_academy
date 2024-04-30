@@ -34,7 +34,7 @@ const LoginForm = () => {
             // Add any further logic you need after successful login
             setTimeout(() => {
                 navigate('/resources');
-            }, 3000); // 3000 milliseconds (3 seconds)
+            },); // 3000 milliseconds (3 seconds)
         } catch (e) {
             console.log(e);
             toast.error('Invalid email or password. Please try again.', { position: "top-right" });

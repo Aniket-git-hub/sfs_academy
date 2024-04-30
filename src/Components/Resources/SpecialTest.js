@@ -51,7 +51,7 @@
 // export default SpecialTest;
 
 import React, { useState, useEffect } from "react";
-import axios from 'axios';
+import instance from 'axios';
 
 const SpecialTest = () => {
     const [data, setData] = useState([]);
@@ -59,7 +59,7 @@ const SpecialTest = () => {
     useEffect(() => {
         const loadData = async () => {
             try {
-                const response = await axios.get("/document"); // Assuming this is the correct endpoint
+                const response = await instance.get("/document"); // Assuming this is the correct endpoint
                 setData(response.data.documents);
             } catch (error) {   
                 console.error("Error loading data:", error);
