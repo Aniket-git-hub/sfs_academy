@@ -59,7 +59,7 @@ const SpecialTest = () => {
     useEffect(() => {
         const loadData = async () => {
             try {
-                const response = await instance.get("/document"); // Assuming this is the correct endpoint
+                const response = await instance.get("/document");
                 setData(response.data.documents);
             } catch (error) {
                 console.error("Error loading data:", error);
@@ -68,21 +68,11 @@ const SpecialTest = () => {
         loadData();
     }, []);
 
-    useEffect(() => {
-        console.log(data)
-    }, [data])
-
     return (
         <div>
             {
                 data?.length > 0 ? <DocumentList documents={data} /> : <p> No Data </p>
             }
-            {/* {data.filter(item => item.category.id === 1).map(c => (
-                <div key={c.id}>
-                    <div>{c.caption}</div>
-                    <a href={"http://localhost:3000/api/documents/" + c.id} target="_blank">View Document</a>
-                </div>
-            ))} */}
         </div>
     );
 };
