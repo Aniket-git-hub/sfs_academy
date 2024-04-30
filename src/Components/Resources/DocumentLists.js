@@ -8,7 +8,7 @@ function DocumentList({ documents }) {
 
     const groupedDocuments = {};
     filteredDocuments.forEach(document => {
-        const categoryName = document.categories[0].documentCategory.name;
+        const categoryName = document.categories[0].name;
         if (!groupedDocuments[categoryName]) {
             groupedDocuments[categoryName] = [];
         }
@@ -20,7 +20,6 @@ function DocumentList({ documents }) {
         <div>
             {Object.entries(groupedDocuments).map(([categoryName, documents]) => (
                 <div key={categoryName}>
-                    <h2>Category: {categoryName}</h2>
                     <ul>
                         {documents.map(document => (
                             <li key={document.id}>

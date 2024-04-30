@@ -1,15 +1,13 @@
 import { React, useState } from "react";
-import FormFields from "../Common/FormFields";
-import "../../Assets/css/CounsellingForm.css";
-import Navbar from "../utilities/NavbarItems";
-import Footer from "../utilities/Footer";
-import "../../Assets/css/LoginForm.css";
 import { useNavigate } from 'react-router-dom';
-import instance from "../../Config/axiosconfig.js";
-import { toast } from 'react-toastify';
+import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import { ToastContainer } from 'react-toastify';
-import Password from "../Common/Password";
+import "../../Assets/css/CounsellingForm.css";
+import "../../Assets/css/LoginForm.css";
+import instance from "../../Config/axiosconfig.js";
+import FormFields from "../Common/FormFields";
+import Footer from "../utilities/Footer";
+import Navbar from "../utilities/NavbarItems";
 
 const LoginForNotes = () => {
 
@@ -28,7 +26,7 @@ const LoginForNotes = () => {
     const handleLoginSubmit = async (event) => {
         event.preventDefault();
         try {
-            const response = await instance.post("auth/login", { email, password });
+            const response = await instance.post("auth/forgotpassword", { email });
             console.log(response);
             toast.success('Login successful! You now have access to the Resources', { position: "top-right" });
             // Add any further logic you need after successful login
