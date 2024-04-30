@@ -50,32 +50,39 @@
 
 // export default SpecialTest;
 
-import React, { useState, useEffect } from "react";
-import axios from 'axios';
-
+import { useEffect, useState } from "react";
+import instance from "../../Config/axiosconfig.js";
+import DocumentList from "./DocumentLists.js";
 const SpecialTest = () => {
     const [data, setData] = useState([]);
 
     useEffect(() => {
         const loadData = async () => {
             try {
-                const response = await axios.get("/document"); // Assuming this is the correct endpoint
+                const response = await instance.get("/document"); // Assuming this is the correct endpoint
                 setData(response.data.documents);
-            } catch (error) {   
+            } catch (error) {
                 console.error("Error loading data:", error);
             }
         };
         loadData();
     }, []);
 
+    useEffect(() => {
+        console.log(data)
+    }, [data])
+
     return (
         <div>
-            {data.filter(item => item.category.id === 1).map(c => (
+            {
+                data?.length > 0 ? <DocumentList documents={data} /> : <p> No Data </p>
+            }
+            {/* {data.filter(item => item.category.id === 1).map(c => (
                 <div key={c.id}>
                     <div>{c.caption}</div>
                     <a href={"http://localhost:3000/api/documents/" + c.id} target="_blank">View Document</a>
                 </div>
-            ))}
+            ))} */}
         </div>
     );
 };
